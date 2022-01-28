@@ -1,0 +1,38 @@
+body {
+    font-size: 16x;
+    background-color: palevioletred;
+  }
+
+  h1 { 
+    font-size: 65px;
+    color: palegoldenrod;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline overline;
+  }
+
+  .perguntadecores {
+    width: 520px;
+    background-color: paleturquoise;
+  }
+
+  
+
+  p {
+    font-size: 3em;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 45px;
+    
+  }  
+  
+  #yel {
+    background-color: yellow;
+  }
+
+  #red {
+    background-color: red;
+  }
+
+  #brw {
+    background-color: brown;
