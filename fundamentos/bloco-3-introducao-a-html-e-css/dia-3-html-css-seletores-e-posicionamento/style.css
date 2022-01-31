@@ -1,0 +1,47 @@
+ol li {
+  background-color: yellow;
+}
+
+ol li:nth-child(even) {
+  color: green;
+}
+
+ol li:nth-child(odd) {
+  text-transform: uppercase;
+}
+
+h1,
+h3 {
+  color: red;
+}
+
+h1 em,
+h3 em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+#linguagens li:nth-child(-n+3) {
+    color: blue;
+}
+
+.java {
+  background-color: pink;
+}
+
+#aliados li a:hover {
+    font-weight: bold;
+    color: turquoise;
+}
+
+body {
+    background-color: rgb(141, 153, 174);
+}
