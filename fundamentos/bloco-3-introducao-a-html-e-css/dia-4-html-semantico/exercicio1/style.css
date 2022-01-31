@@ -1,0 +1,60 @@
+header {
+    display: inline-block;
+    width: 101%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    ;
+  }
+
+#podium {
+    text-align: center;
+    
+}
+
+
+#premios {
+    text-align: center;
+}
+
+.premio1 {
+    display: inline-block;
+}
+
+.premio2 {
+    display: inline-block;
+}
+
+.premio3 {
+    display: inline-block;
+}
+
+
