@@ -1,0 +1,16 @@
+Algoritmo como se vestir para uma festa
+
+1  -  descobrir que tipo de festa é
+2  -  ir até o guarda roupa
+3  -  abrir a porta
+4  -  analisar as camisas que tenho
+5  -  analisar as bermudas/calças que tenho
+6  -  analisar os calçados que tenho
+7  -  analisar os acessórios que tenho
+8  -  pensar em possíveis combinações entre as peças
+9  -  escolher pelo menos duas combinações que gosto
+10 -  experimentar as roupas e se ver no espelho com cada uma
+11 -  caso necessário, pedir opinião de alguém
+12 -  juntar os fatos e decidir a roupa
+13 -  vestir cada peça
+14 -  festa!
