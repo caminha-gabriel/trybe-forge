@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="pgraphs">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="pgraphs">Segundo parágrafo!</p>
+    </header>
+    <script>
+        const body = document.body;
+        body.style.backgroundColor = 'green';
+
+        const title = document.querySelector("#page-title");
+        title.innerText = "WEEELCOME TO MY WORLD!";
+      
+        const paragraph = document.querySelector("#paragraph");
+        paragraph.style.color = "rgb(64,241,0)";
+        paragraph.innerText = '* ejects smoke out *';
+        paragraph.style.fontStyle = 'italic';
+        paragraph.style.fontWeight = 'bold';
+        paragraph.style.width = "150px"
+
+        const subtitle = document.querySelector("#subtitle");
+        subtitle.innerText = '* throws some venom to sky *';
+        subtitle.style.fontStyle = 'italic';
+
+        const paragraph2 = document.querySelector("#second-paragraph");
+        paragraph2.innerText = 'You thought that you could kill me ?';
+        paragraph2.style.fontWeight = "bolder";
+
+        const pgraphs = document.querySelectorAll(".pgraphs");
+        pgraphs[0].style.backgroundColor = 'purple';
+
+        document.querySelector("h4").style.color = "cyan";
+    </script>
+  </body>
+</html>

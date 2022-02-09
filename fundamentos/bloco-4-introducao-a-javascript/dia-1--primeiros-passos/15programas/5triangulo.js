@@ -8,6 +8,6 @@ if (angA+angB+angC === 180) {
 else if (angA+angB+angC !== 180){
     console.log(false)
 }
-else if (angA+angB+angC < 0 {
+else if (angA+angB+angC < 0) {
     console.log("Deu ruim");
 }
