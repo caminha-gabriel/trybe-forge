@@ -8,7 +8,7 @@ let info = {
 
 // console.log('Seja Bem Vinda, '+info.personagem+'!');
 
-// 2 - Insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console.
+// 2 - Insira no objeto uma nova propriedade cominfo o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console.
 
 info['recorrente'] = 'Sim'
 // console.log(info);
@@ -34,12 +34,12 @@ let info2 = {
     recorrente: 'Sim'
 }
 
-// for (let key in info2, info) {
-//     if (key === 'recorrente' && info[key] === 'Sim' && info2[key] === 'Sim') {
-//         console.log('Ambos Recorrentes');
-//     } else
-//     console.log(key+': '+ info[key]+ ' e '+ info2[key]);
-// }
+for (let key in info2, info) {
+    if (key === 'recorrente' && info[key] === 'Sim' && info2[key] === 'Sim') {
+        console.log('Ambos Recorrentes');
+    } else
+    console.log(key+': '+ info[key]+ ' e '+ info2[key]);
+}
 
 // 6, 7 e 8 - Acesse as chaves nome , sobrenome e titulo , que está dentro da chave livrosFavoritos , e faça um console.log no seguinte formato: "O livro favorito de Julia Pessoa se chama 'O Pior Dia de Todos'".
 
