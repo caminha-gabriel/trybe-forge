@@ -196,7 +196,7 @@ function addColorTaskToDay() {
   let days = document.querySelectorAll(".day");
   let divColor = divWithColor.style.backgroundColor;
   let normalColor = "#eee";
-  
+
   for (index = 0; index < days.length; index += 1) {
     days[index].addEventListener("click", function (event) {
       let eventColor = event.target.style.backgroundColor;
@@ -206,7 +206,6 @@ function addColorTaskToDay() {
       } else if (taskSelected.length > 0 && eventColor === divColor) {
         event.target.style.backgroundColor = normalColor;
       }
-      
     });
   }
 }
