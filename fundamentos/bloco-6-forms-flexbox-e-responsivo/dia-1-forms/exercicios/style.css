@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 28px;
+}
+
+body {
+  background-color: #0fa36b;
+}
+
+header {
+  width: 50%;
+  margin: 0 auto;
+  padding: 36px;
+}
+
+header h1 {
+  font-size: 48px;
+  text-shadow: 1px 1px 2px #dee2e6;
+}
+
+form {
+  background-color: #dee2e6;
+  border: 3px solid #1b2f33;
+  padding: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+form div {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.trip-options {
+  margin-left: -8px;
+}
+.trip-options input{
+  margin-left: 8px;
+}
+
+textarea {
+  resize: none;
+  border: 2px solid #1b2f33;
+  padding: 4px;
+}
+
+button {
+  padding: 8px;
+  margin-top: 30px;
+  background-color: #0fa36b;
+  color: #dee2e6;
+}
+
+input {
+  border: 2px solid #1b2f33;
+  padding: 4px;
+}
