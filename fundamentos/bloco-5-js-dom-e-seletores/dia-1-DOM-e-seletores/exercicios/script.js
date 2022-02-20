@@ -14,31 +14,50 @@ function changeText(text, tag) {
         
     }
 }
+//changeText('carls', 'p');
+
 
 //  Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 function changeColorByClass(_class, color) {
     let content = document.getElementsByClassName(_class);
     content[0].style.backgroundColor = color;
 }
-
 changeColorByClass('main-content', 'rgb(76, 164, 109)');
+
+
 //  Crie uma função que mude a cor do quadrado vermelho para branco.
 function redSquareToWhite() {
     let square = document.getElementsByClassName('center-content')[0];
     square.style.backgroundColor = 'white';
 }
 redSquareToWhite();
+
+
 //  Crie uma função que corrija o texto da tag <h1>.
 
 function correctH1Text() {
     document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
 }
 correctH1Text();
+
+
 //  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 
 function tagPToUpper() {
+    let tagsP = document.getElementsByTagName('p');
+    for (let index = 0; index < tagsP.length; index += 1) {
+        tagsP[index].innerText = tagsP[index].innerText.toUpperCase();
+    }
     
 }
+tagPToUpper();
+
 //  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 
-
+    function logAllP() {
+        let tagsP = document.getElementsByTagName('p');
+        for (let index = 0; index < tagsP.length; index += 1) {
+            console.log(tagsP[index].innerHTML);
+        }
+    }
+    logAllP();
