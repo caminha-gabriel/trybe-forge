@@ -23,38 +23,49 @@
         // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
         document.getElementById('elementoOndeVoceEsta').parentNode.style.color = 'red';
         
-        // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso ?
         document.querySelector('#primeiroFilhoDoFilho'
         ).innerText = 'The Hunt is Over';
         
-        // Acesse o primeiroFilho a partir de pai .
+        // Acesse o primeiroFilho a partir de pai
         console.log(document.querySelector('#pai').firstElementChild);
 
-        // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+        // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta
         console.log(document.querySelector('#elementoOndeVoceEsta').previousElementSibling);
 
-        // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+        // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta
         console.log(document.querySelector('#elementoOndeVoceEsta').nextSibling);
 
         
-        // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+        // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta
         console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
 
-        // Agora acesse o terceiroFilho a partir de pai .
+        // Agora acesse o terceiroFilho a partir de pai
         console.log(document.querySelector('#pai').lastElementChild.previousElementSibling);
 
-        // Crie um irmão para elementoOndeVoceEsta .
+        // Crie um irmão para elementoOndeVoceEsta
         let newSection = document.createElement('section');
         newSection.innerText = 'Sibling';
         let fatherElement = document.querySelector('#pai');
         fatherElement.appendChild(newSection);
         
-        // Crie um filho para elementoOndeVoceEsta.
+        // Crie um filho para elementoOndeVoceEsta
         let newChild = document.createElement('div');
         newChild.id = 'test'
         let ondeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
         ondeVoceEsta.appendChild(newChild);
-        console.log(ondeVoceEsta);
+
+        // Crie um filho para primeiroFilhoDoFilho
+        let newestChild = document.createElement('div');
+        newestChild.innerHTML = 'teste newest,'
+        let father = document.querySelector('#primeiroFilhoDoFilho');
+        father.appendChild(newestChild);
+
+        // A partir desse filho criado, acesse terceiroFilho .
+        console.log(newestChild.parentElement.parentElement.nextElementSibling);
+
+        document.querySelector('#paiDoPai').removeChild('primeiroFilho');
+
     </script>
   </body>
 </html>
