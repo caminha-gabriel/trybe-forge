@@ -1,0 +1,22 @@
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+#datePickerDiv {
+  max-width: 50%;
+  border: 2px solid black;
+}
