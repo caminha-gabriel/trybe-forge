@@ -64,8 +64,25 @@
         // A partir desse filho criado, acesse terceiroFilho .
         console.log(newestChild.parentElement.parentElement.nextElementSibling);
 
-        document.querySelector('#paiDoPai').removeChild('primeiroFilho');
+        // Remova todos os elementos filhos de paiDoPai exceto pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
 
+        let elementoPai = document.querySelector('#pai');
+        let filhosPai = elementoPai.children;
+
+        for (let index = 0; index < filhosPai.length; index += 1) {
+          let elementX = filhosPai[index];
+          console.log(elementX);
+          if(elementX.getAttribute('id') == 'elementoOndeVoceEsta' || elementX.getAttribute('id' == 'terceiroFilho')) {
+            console.log('carls');
+          } else {
+            console.log('not carls');
+          }
+        }          
+
+        document.querySelector('#pai').removeChild(primeiroFilho);
+        document.querySelector('#pai').removeChild(terceiroFilho);
+        document.querySelector('#pai').removeChild(quartoEUltimoFilho);
+        
     </script>
   </body>
 </html>
