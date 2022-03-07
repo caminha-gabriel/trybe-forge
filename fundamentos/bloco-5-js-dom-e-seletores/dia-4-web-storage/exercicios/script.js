@@ -52,12 +52,11 @@ switch (color) {
   break;
 
   case 'purple':
-    body.style.color = 'purple';
-  break;
-
-  case 'red':
-    body.style.color = 'red';
+  body.style.color = 'purple'
   break;
   }
 });
-
+selectFontSize.addEventListener('keyup', (event) => {
+  const size = event.target.value;
+  body.style.fontSize = size +'px';
+})
