@@ -8,6 +8,4 @@ function myRemove(arr, item) {
   return newArr;
 }
 
-// implemente seus testes aqui
-
 module.exports = myRemove;
