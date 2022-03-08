@@ -15,8 +15,11 @@
 <body>
   <h1>Lorem Ipsum</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, asperiores quia? Aliquid neque iste vel voluptatem. Ipsa ullam aperiam sint eveniet nobis sapiente quibusdam expedita, sed qui possimus quae ut.</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ut at fugiat magni vel tempora quae earum cupiditate distinctio? Accusantium temporibus officiis perspiciatis dolorum minima et odio iusto? Rem, perspiciatis. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolore exercitationem doloremque, non sapiente iusto aspernatur fugit laborum. Voluptates, dignissimos earum doloribus dolor repellat eaque natus fugiat facilis doloremque ducimus.
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ut at fugiat magni vel tempora quae earum cupiditate distinctio? Accusantium temporibus officiis perspiciatis dolorum minima et odio iusto? Rem, perspiciatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolore exercitationem doloremque, non sapiente iusto aspernatur fugit laborum. Voluptates, dignissimos earum doloribus dolor repellat eaque natus fugiat facilis doloremque ducimus.
   </p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ut at fugiat magni vel tempora quae earum cupiditate distinctio? Accusantium temporibus officiis perspiciatis dolorum minima et odio iusto? Rem, perspiciatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolore exercitationem doloremque, non sapiente iusto aspernatur fugit laborum. Voluptates, dignissimos earum doloribus dolor repellat eaque natus fugiat facilis doloremque ducimus.
+  </p>
+  <label for="bgColor"> bgColor: </label>
   <select name="bgColor" id="bgColor">
     <option value="white">White</option>
     <option value="blue">Blue</option>
@@ -25,6 +28,7 @@
     <option value="purple">Purple</option>
     <option value="red">Red</option>
   </select>
+  <label for="textColor"> textColor: </label>
   <select name="textColor" id="textColor">
     <option value="white">White</option>
     <option value="blue">Blue</option>
@@ -33,7 +37,20 @@
     <option value="purple">Purple</option>
     <option value="red">Red</option>
   </select>
-  <input value="26" type="number" id="fontSize">
+  <label for="fontSize"> fontSize: </label>
+  <input value="26" type="number" name="fontSize" id="fontSize">
+  <label for="lineHeight"> lineHeight: </label>
+  <select name="lineHeight" id="lineHeight">
+    <option value="normal">Normal</option>
+    <option value="0.8x">0.8x</option>
+    <option value="1.6x">1.6x</option>
+    <option value="2.4x">2.4x</option>
+  </select>
+  <label for="fontFamily"> fontFamily: </label>
+  <select name="fontFamily" id="fontFamily">
+    <option value="verdana">Verdana</option>
+    <option value="helvetica">Helvetica</option>
+  </select>
   <script src="script.js"></script>
 </body>
 </html>
