@@ -15,8 +15,3 @@ header.container {
 textarea {
   resize: none;
 }
-
-#datePickerDiv {
-  max-width: 50%;
-  border: 2px solid black;
-}
