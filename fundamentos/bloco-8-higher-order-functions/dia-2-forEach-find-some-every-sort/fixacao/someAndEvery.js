@@ -21,3 +21,9 @@ const verifyAges = (arr, minimumAge) => {
 }
 
 console.log(verifyAges(people, 18));
+
+people.sort((a, b) => {
+  return b.age - a.age;
+})
+
+console.log(people);
