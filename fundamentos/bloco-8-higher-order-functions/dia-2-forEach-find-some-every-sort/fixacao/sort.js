@@ -12,7 +12,6 @@ const sortArray = (array) => {
   array.sort((a, b) => {
     return a.age - b.age;
 });
-
 }
 
 sortArray(people);
