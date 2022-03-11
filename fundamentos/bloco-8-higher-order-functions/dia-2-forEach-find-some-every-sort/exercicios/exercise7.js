@@ -66,5 +66,14 @@ const books = [
 // Adicione o código do exercício aqui:
 
 function authorUnique() {
-  // escreva seu código aqui
+  let equal = false;
+  let date = 0;
+  books.forEach((element) => {
+    if (element.author.birthYear === date) {
+      equal = true;
+    };
+    date = element.author.birthYear;
+  });
+  return equal;
 }
+console.log(authorUnique());
