@@ -63,9 +63,11 @@ const books = [
 
 // 1 - Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947. Dica: use a função find .
 
-
 // Adicione o código do exercício aqui:
 
 function authorBornIn1947() {
-  // escreva aqui o seu código
+  let personObj = books.find((element) => element.author.birthYear === 1947);
+  return personObj.author.name;
 }
+
+console.log(authorBornIn1947());
