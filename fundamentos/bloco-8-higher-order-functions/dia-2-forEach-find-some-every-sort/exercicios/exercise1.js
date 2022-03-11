@@ -68,6 +68,6 @@ const books = [
 function authorBornIn1947() {
   let personObj = books.find((element) => element.author.birthYear === 1947);
   return personObj.author.name;
-}
+};
 
 console.log(authorBornIn1947());
