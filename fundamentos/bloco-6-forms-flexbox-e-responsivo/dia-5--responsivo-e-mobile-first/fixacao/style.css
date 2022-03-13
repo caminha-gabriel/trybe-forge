@@ -64,6 +64,14 @@ p strong {
 
 .card:nth-of-type(3) {
   background-color: #41197f;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  width: 200px;
 }
 
 @media screen and (min-width: 500px) {
