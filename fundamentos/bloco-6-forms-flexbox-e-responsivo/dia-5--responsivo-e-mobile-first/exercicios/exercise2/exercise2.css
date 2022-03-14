@@ -12,8 +12,12 @@ html {
 }
 
 header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid black;
-  padding: 6px;
+  padding: 12px;
   background-color: #b5c99a;
   font-style: italic;
 }
@@ -22,11 +26,16 @@ body {
   background-color: #e9f5db;
 }
 
+h2 {
+  font-size: 1.4rem;
+}
+
 .main-content {
   background-color: #87986a;
   border: 2px solid black;
 }
-header ul {
+
+.collapse {
   padding-left: 4px;
   padding-bottom: 4px;
   padding-right: 2px;
@@ -48,9 +57,35 @@ header ul {
 header ul li {
   padding-top: 4px;
 }
+
+.aside-one {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aside-one ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.aside-one ul li {
+display: flex;
+flex-basis: 50%;
+padding: 4px;
+font-style: italic;
+text-decoration: underline;
+}
+
 @media screen and (max-width: 600px) {
+  * {
+    font-size: 18px;
+  }
+
   header p {
-    font-size: 1.5em;
+    font-size: 1.6rem;
   }
 
   header i {
@@ -61,38 +96,10 @@ header ul li {
     display: none;
   }  
 
-  header {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .aside-one {
-    margin-top: 4px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .aside-one ul {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-}
-
-.aside-one ul li {
-  display: flex;
-  flex-basis: 50%;
-  padding: 4px;
-  font-style: italic;
-  text-decoration: underline;
 }
 
 .main-content {
   padding: 6px;
-
 }
 
 .main-content h1 {
@@ -102,9 +109,57 @@ header ul li {
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
+  * {
+    font-size: 20px;
+  }
   
+  header p {
+    font-size: 1.4rem;
+  }
+
+  #collapseBtn {
+    display: none;
+  }
+
+  .collapse {
+  flex-direction: row;
+  position: static;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  }  
+}
+
+.collapse li {
+  font-size: 1.1rem;
+  padding-right: 8px;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 769px) {
+  * {
+    font-size: 24px;
+  }
   
+  header p {
+    font-size: 1.6rem;
+  }
+
+  #collapseBtn {
+    display: none;
+  }
+
+  .collapse {
+  flex-direction: row;
+  position: static;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  }  
+
+.collapse li {
+  font-size: 1.1rem;
+  padding-right: 8px;
+  text-decoration: underline;
+}
 }
