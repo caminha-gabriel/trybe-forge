@@ -83,6 +83,39 @@ body {
   #header, #navigation, #footer {
     display: none;
   }
+}
 
-  
+@media screen and (max-width: 500px) {
+  #aside {
+    display: none;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #navigation {
+    padding-top: 84px;
+  }
+
+  #navigation ul {
+    flex-direction: column;
+  }
+
+  #navigation ul a {
+    border-right: 0;
+  }
 }
