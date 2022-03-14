@@ -22,6 +22,11 @@ header {
   font-style: italic;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 body {
   background-color: #e9f5db;
 }
@@ -33,25 +38,6 @@ h2 {
 .main-content {
   background-color: #87986a;
   border: 2px solid black;
-}
-
-.collapse {
-  padding-left: 4px;
-  padding-bottom: 4px;
-  padding-right: 2px;
-  padding-top: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #b5c99a;
-  position: absolute;
-  list-style: none;
-  right: 0px;
-  top: 59px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
 }
 
 header ul li {
@@ -79,6 +65,32 @@ font-style: italic;
 text-decoration: underline;
 }
 
+.main-content {
+  padding: 8px;
+}
+
+.main-content h1 {
+  margin: 0;
+  padding: 4px 16px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.main-content p {
+  padding-bottom: 16px;
+}
+
+.aside-two {
+  padding: 8px;
+  text-align: center;
+}
+
+footer {
+  padding: 8px;
+  border-top: 2px solid black;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
   * {
     font-size: 18px;
@@ -98,20 +110,16 @@ text-decoration: underline;
 
 }
 
-.main-content {
-  padding: 6px;
-}
-
-.main-content h1 {
-  margin: 0;
-  padding: 4px 16px;
-  text-align: center;
-}
-
 @media screen and (min-width: 601px) and (max-width: 768px) {
   * {
-    font-size: 20px;
+    font-size: 22px;
   }
+
+.collapse {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
   
   header p {
     font-size: 1.4rem;
@@ -138,9 +146,15 @@ text-decoration: underline;
 
 @media screen and (min-width: 769px) {
   * {
-    font-size: 24px;
+    font-size: 26px;
   }
   
+  .collapse {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
   header p {
     font-size: 1.6rem;
   }
@@ -149,17 +163,9 @@ text-decoration: underline;
     display: none;
   }
 
-  .collapse {
-  flex-direction: row;
-  position: static;
-  border-left: 0;
-  border-bottom: 0;
-  border-right: 0;
-  }  
-
 .collapse li {
   font-size: 1.1rem;
   padding-right: 8px;
   text-decoration: underline;
-}
+  }
 }
