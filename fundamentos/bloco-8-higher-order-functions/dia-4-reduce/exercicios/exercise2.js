@@ -64,3 +64,7 @@ const books = [
 // 2 - Crie uma string com os nomes de todas as pessoas autoras.
 
 // Adicione o código do exercício aqui:
+
+const namesString = (array) => array.reduce((acc, curr) => `${acc} ${curr.author.name};`, '');
+
+console.log(namesString(books));
