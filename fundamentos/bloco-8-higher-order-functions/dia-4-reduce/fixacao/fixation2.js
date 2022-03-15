@@ -8,11 +8,6 @@ const sumOf = ((array) => array.reduce((acc, cur) => acc + cur));
 
 console.log(sumOf(pairsOf(numbers)));
 
-const pairsWithReduceOnly = (array) => array.reduce((acc, cur) => {
-  if (cur % 2 === 0) {
-    return acc + cur
-  }
-  return acc
-});
+const pairsWithReduceOnly = (array) => array.reduce((acc, cur) => cur % 2 === 0 ? acc + cur : acc);
 
 console.log(pairsWithReduceOnly(numbers));
