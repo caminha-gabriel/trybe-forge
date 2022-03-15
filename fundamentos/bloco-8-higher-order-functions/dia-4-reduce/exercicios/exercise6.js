@@ -4,16 +4,10 @@ const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
 const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
 
 const studentAverage = () => {
-  const averageGrades = grades.map((element) => {
-    let sum = 0;
-    element.forEach((number) => sum += number);
-    return sum / element.length;
-  });
-
-
-  const newObjs = averageGrades.map((element, index) => {
-    return {name: students[index], average: element};
-  })
+  const newObjs = students.map ((name, index) => ({
+      name: name,
+      average: (grades[index].reduce((acc, curr) => acc + curr)) / grades[index].length,
+    }));
   return newObjs
 }
 
