@@ -65,10 +65,12 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
+sumDates = (acc, curr) => {
+  return acc + (curr.releaseYear - curr.author.birthYear);
+};
+
 const calcAverageAge = (array) => {
-  sum = array.reduce((acc, curr) => {
-    return acc + (curr.releaseYear - curr.author.birthYear);
-  }, 0);
+  sum = array.reduce(sumDates, 0);
   return sum / array.length;
 }
 
