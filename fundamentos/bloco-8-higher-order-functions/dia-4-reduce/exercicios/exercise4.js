@@ -64,3 +64,7 @@ const books = [
 // 4 - Encontre o livro com o maior nome.
 
 // Adicione o código do exercício aqui:
+
+const biggestName = books.reduce((acc, curr) => curr.name.length > acc.length ? curr.name : acc, '');
+
+console.log(biggestName);
