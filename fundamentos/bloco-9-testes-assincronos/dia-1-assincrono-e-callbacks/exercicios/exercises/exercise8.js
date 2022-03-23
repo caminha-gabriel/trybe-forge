@@ -33,7 +33,7 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails();
+getPokemonDetails((element) => element.name === 'Squirtle', console.log);
 
 module.exports = {
   getPokemonDetails,
