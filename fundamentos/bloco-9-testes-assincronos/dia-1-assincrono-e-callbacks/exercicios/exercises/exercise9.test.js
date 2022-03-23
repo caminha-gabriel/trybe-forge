@@ -20,7 +20,19 @@ describe("A função getPokemonDetails", () => {
     getPokemonDetails(notAPokemon, testError);
   });
 
-  it("retorna um pokemon que existe no banco de dados", () => {
-    // Escreva aqui seu código
+  it("retorna um pokemon que existe no banco de dados", (done) => {
+    const pokemonToFind = (element) => element.name === 'Bulbasaur';
+    const rightMessage = `Olá, seu pokémon é o Bulbasaur, o tipo dele é Grass e a habilidade principal dele é Razor Leaf`;
+
+    function testRightPokemon (newError, result) {
+      try {
+        expect(result).toBe(rightMessage);
+        done();
+      } catch (error) {
+        done(error);
+      }
+    }
+
+    getPokemonDetails(pokemonToFind, testRightPokemon);
   });
 });
