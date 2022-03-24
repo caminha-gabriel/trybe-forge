@@ -27,19 +27,19 @@ const corporationsList = document.getElementById('corporations-used-by');
 const advantagesList = document.getElementById('advantages');
 const languagesList = document.getElementById('languages-used-by');
 
-usoJSONPorque.muitasEmpresasUsam.map((empresa) => {
+usoJSONPorque.muitasEmpresasUsam.forEach((empresa) => {
   const newLi = document.createElement('li');
   newLi.innerText = empresa;
   corporationsList.appendChild(newLi);
 });
 
-usoJSONPorque.temVariasVantagens.map((vantagens) => {
+usoJSONPorque.temVariasVantagens.forEach((vantagens) => {
   const newLi = document.createElement('li');
   newLi.innerText = vantagens;
   advantagesList.appendChild(newLi);
 });
 
-usoJSONPorque.muitasLinguagensDaoSuporte.map((linguagens) => {
+usoJSONPorque.muitasLinguagensDaoSuporte.forEach((linguagens) => {
   const newLi = document.createElement('li');
   newLi.innerText = linguagens;
   languagesList.appendChild(newLi);
