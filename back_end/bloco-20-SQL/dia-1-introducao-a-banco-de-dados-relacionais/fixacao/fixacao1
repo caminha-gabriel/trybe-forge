@@ -1,0 +1,12 @@
+address table
+1. primary key;
+2. foreign key;
+3. not null, unique;
+
+city table
+1. primary key;
+2. cause it's a foreign key;
+
+film table
+1. film_id
+2. category_id
