@@ -1,0 +1,15 @@
+SELECT 'This is SQL Exercise, Practice and Solution'
+SELECT 2, 4, 34
+SELECT 10 + 15
+SELECT 10 + 4 * 2
+SELECT * FROM Scientists.Scientists
+SELECT name AS nome_do_projeto, hours AS tempo_de_trabalho FROM Scientists.Projects
+SELECT * FROM Scientists.Scientists ORDER BY name
+SELECT * FROM Scientists.Projects ORDER BY name
+SELECT CONCAT('O Projeto ', name, ' precisou de ', hours, ' horas para ser concluído.') FROM Scientists.Projects
+SELECT name, hours FROM Scientists.Projects ORDER BY hours DESC
+SELECT DISTINCT project FROM Scientists.AssignedTo
+SELECT name FROM Scientists.Projects ORDER BY hours DESC LIMIT 1
+SELECT name FROM Scientists.Projects ORDER BY hours ASC LIMIT 1 OFFSET 1
+SELECT * FROM Scientists.Projects ORDER BY hours ASC LIMIT 5
+SELECT CONCAT('Existem ', COUNT(SSN), ' cientistas na tabela Scientists.') FROM Scientists.Scientists LIMIT 0, 1000
