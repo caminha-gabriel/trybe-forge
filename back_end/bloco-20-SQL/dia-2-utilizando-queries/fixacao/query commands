@@ -1,9 +1,7 @@
-//
 SELECT concat(title, ' ', release_year) AS movie_launch FROM sakila.film;
 SELECT concat(title, ' ', rating) AS movie_rating FROM sakila.film;
 SELECT concat(address, ' ', district) AS address FROM sakila.address;
 
-//
 CREATE DATABASE Escola;
 CREATE TABLE IF NOT EXISTS Escola.Estudantes (
     nome VARCHAR(7) CHARACTER SET utf8,
@@ -20,13 +18,10 @@ SELECT DISTINCT nome, idade FROM Escola.Estudantes;
 SELECT DISTINCT nome FROM Escola.Estudantes;    
 SELECT DISTINCT idade FROM Escola.Estudantes;
 
-//
 SELECT COUNT(address2) FROM sakila.address
 WHERE address2 != '';
 
-//
 SELECT * FROM sakila.rental LIMIT 10;
 
-//
 SELECT * FROM sakila.address
 ORDER BY district ASC, address ASC;
