@@ -1,0 +1,15 @@
+INSERT INTO sakila.staff (first_name, last_name, address_id, store_id, active, username) VALUES ('Kabuto', 'Vascaino', 1, 2, 1, 'Kabuto pelo Hexa');
+INSERT INTO sakila.staff (first_name, last_name, address_id, email, store_id, active, username) VALUES ('Love', 'Thunder', 13, 'Love.Thunder@sakilastaff.com', 1, 0, 'Girl');
+INSERT INTO sakila.staff (first_name, last_name, address_id, store_id, active, username) VALUES ('Atreus', '', 15, 1, 1, 'Boy'), ('Faye', '', 99, 2, 0, 'Mom');
+INSERT INTO sakila.actor (first_name, last_name) SELECT first_name, last_name FROM sakila.customer LIMIT 5;
+INSERT INTO sakila.category (name) VALUES ('eSports'), ('Development'), ('SteamPunk');
+INSERT INTO sakila.store (manager_staff_id, address_id) VALUES (3, 69);
+DELETE FROM sakila.staff WHERE last_name = '' AND staff_id BETWEEN 5 AND 10;
+SET sql_safe_updates=0;
+DELETE FROM sakila.film_actor WHERE actor_id IN (12, 726);
+DELETE FROM sakila.actor WHERE first_name = 'KARL';
+DELETE FROM sakila.film_actor WHERE actor_id IN (8, 103, 181, 523);
+DELETE FROM sakila.actor WHERE first_name = 'MATTHEW';
+DELETE FROM sakila.film_text WHERE description LIKE '%saga%';
+TRUNCATE sakila.film_actor;
+TRUNCATE sakila.film_category;
