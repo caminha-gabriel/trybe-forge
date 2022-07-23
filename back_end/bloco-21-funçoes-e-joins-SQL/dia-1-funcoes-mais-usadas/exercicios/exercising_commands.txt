@@ -1,0 +1,46 @@
+SELECT MAX(salary) AS max_salary FROM hr.employees;
+SELECT MAX(salary) - MIN(salary) AS salary_diff FROM hr.employees;
+SELECT job_id, ROUND(AVG(salary)) AS average_salary FROM hr.employees
+GROUP BY job_id
+ORDER BY average_salary DESC;
+SELECT SUM(salary) AS salary_sum FROM hr.employees;
+SELECT 
+    ROUND(MAX(salary), 2) AS max_salary,
+    ROUND(MIN(salary), 2) AS min_salary,
+    ROUND(SUM(salary), 2) AS salary_sum,
+    ROUND(AVG(salary), 2) AS average_salary
+FROM
+    hr.employees;
+SELECT 
+    job_id, COUNT(*) AS workers
+FROM
+    hr.employees
+GROUP BY job_id
+HAVING job_id = 'it_prog';
+SELECT job_id, SUM(salary) AS salary_sum FROM hr.employees
+GROUP BY job_id;
+SELECT job_id, SUM(salary) AS salary_sum FROM hr.employees
+GROUP BY job_id
+HAVING job_id = 'it_prog';
+SELECT job_id, AVG(salary) AS average_salary FROM hr.employees
+GROUP BY job_id
+HAVING job_id <> 'it_prog';
+SELECT 
+    department_id,
+    AVG(salary) AS average_salary,
+    COUNT(*) AS worker_quantity
+FROM
+    hr.employees
+GROUP BY department_id
+HAVING worker_quantity > 10;
+SELECT REPLACE(phone_number, LEFT(phone_number, 3), 777) FROM hr.employees
+WHERE LEFT(phone_number, 3) = 515;
+SELECT * FROM hr.employees
+WHERE CHAR_LENGTH(first_name) >= 8;
+SELECT employee_id, first_name, YEAR(hire_date) AS year FROM hr.employees;
+SELECT employee_id, first_name, DAY(hire_date) AS day FROM hr.employees;
+SELECT employee_id, first_name, MONTH(hire_date) AS month FROM hr.employees;
+SELECT UCASE(first_name) AS first_name FROM hr.employees;
+SELECT first_name, hire_date FROM hr.employees
+WHERE DATE(hire_date) LIKE '1987-07-__%';
+SELECT first_name, last_name, DATEDIFF(DATE(NOW()), hire_date) AS days_hired FROM hr.employees;
