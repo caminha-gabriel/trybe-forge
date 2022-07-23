@@ -1,0 +1,21 @@
+SELECT active, COUNT(*) FROM sakila.customer
+GROUP BY active;
+SELECT store_id, active, COUNT(active) FROM sakila.customer
+GROUP BY store_id, active;
+SELECT rating, ROUND(AVG(length)) AS average_length FROM sakila.film
+GROUP BY rating
+ORDER BY average_length DESC;
+SELECT district, COUNT(*) AS addresses_in_district FROM sakila.address
+GROUP BY district
+ORDER BY addresses_in_district DESC;
+
+SELECT rating, AVG(length) AS average_length
+FROM sakila.film
+GROUP BY rating
+HAVING average_length BETWEEN 115 AND 121.50
+ORDER BY average_length DESC;
+SELECT rating, SUM(replacement_cost) AS total_rep_cost
+FROM sakila.film
+GROUP by rating
+HAVING total_rep_cost > 3950.50
+ORDER BY total_rep_cost ASC;
