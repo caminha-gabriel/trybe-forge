@@ -1,0 +1,51 @@
+SELECT a.actor_id, a.first_name, a.last_name, f.film_id FROM sakila.actor AS a
+INNER JOIN sakila.film_actor AS f
+ON a.actor_id = f.actor_id;
+
+SELECT st.first_name, st.last_name, ad.address FROM sakila.staff AS st
+INNER JOIN sakila.address AS ad
+ON st.address_id = ad.address_id;
+
+SELECT c.customer_id, c.first_name, c.email, c.address_id, ad.address FROM sakila.customer AS c
+INNER JOIN sakila.address AS ad
+ON c.address_id = ad.address_id
+ORDER BY c.first_name DESC;
+
+SELECT c.first_name, c.email, c.address_id, ad.address, ad.district FROM sakila.customer AS c
+INNER JOIN sakila.address AS ad
+ON c.address_id = ad.address_id
+WHERE ad.district = 'Califórnia' AND first_name LIKE '%rene%';
+
+SELECT
+    c.first_name, COUNT(ad.address) AS address_quantity
+FROM
+    sakila.customer AS c
+        INNER JOIN
+    sakila.address AS ad ON c.address_id = ad.address_id
+WHERE
+    c.active
+GROUP BY c.customer_id
+ORDER BY first_name DESC;
+
+SELECT 
+    st.first_name, st.last_name, ROUND(AVG(p.amount), 2)
+FROM
+    sakila.staff AS st
+        INNER JOIN
+    sakila.payment AS p ON st.staff_id = p.staff_id
+WHERE
+    YEAR(p.payment_date) = '2006'
+GROUP BY st.first_name , st.last_name;
+
+SELECT 
+    act.actor_id,
+    act.first_name,
+    act.last_name,
+    fa.film_id,
+    f.title
+FROM
+    sakila.actor AS act
+        INNER JOIN
+    sakila.film_actor AS fa ON act.actor_id = fa.actor_id
+        INNER JOIN
+    sakila.film AS f ON fa.film_id = f.film_id;

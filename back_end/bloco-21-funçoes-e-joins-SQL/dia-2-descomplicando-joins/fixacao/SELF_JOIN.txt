@@ -1,0 +1,24 @@
+SELECT 
+    CONCAT(c.first_name, ' ', c.last_name) AS employee,
+    c.employee_id,
+    c.department_id,
+    CONCAT(g.first_name, ' ', g.last_name) AS manager,
+    g.employee_id AS manager_id,
+    g.department_id
+FROM
+    hr.employees AS c
+        INNER JOIN
+    hr.employees AS g ON c.employee_id = g.manager_id
+WHERE
+		c.department_id <> g.department_id;
+		
+SELECT 
+    CONCAT(manager.first_name,
+            ' ',
+            manager.last_name) AS manager_name,
+    COUNT(*)
+FROM
+    hr.employees AS manager
+        INNER JOIN
+    hr.employees AS employee ON employee.manager_id = manager.employee_id
+GROUP BY manager_name;
