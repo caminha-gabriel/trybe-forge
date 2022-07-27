@@ -1,0 +1,61 @@
+DROP SCHEMA IF EXISTS normalization;
+CREATE SCHEMA normalization;
+USE normalization;
+
+CREATE TABLE contact (
+    contact_id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(100) NOT NULL
+)  ENGINE=INNODB;
+
+CREATE TABLE sector (
+    sector_id SMALLINT UNSIGNED PRIMARY KEY,
+    sector VARCHAR(50) NOT NULL
+)  ENGINE=INNODB;
+
+CREATE TABLE employee (
+    employee_id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    contact_id SMALLINT UNSIGNED NOT NULL,
+    register_date TIMESTAMP NOT NULL,
+    FOREIGN KEY (contact_id)
+        REFERENCES contact (contact_id)
+)  ENGINE=INNODB;
+ALTER TABLE employee AUTO_INCREMENT=12;
+
+CREATE TABLE employee_sector (
+    employee_id SMALLINT UNSIGNED NOT NULL,
+    sector_id SMALLINT UNSIGNED NOT NULL,
+    FOREIGN KEY (employee_id)
+        REFERENCES employee (employee_id),
+    FOREIGN KEY (sector_id)
+        REFERENCES sector(sector_id)
+)  ENGINE=InnoDB;
+
+INSERT INTO contact (email, phone_number)
+	VALUES ('jo@gmail.com', '(35)998552-1445'),
+  ('andre1990@gmail.com', '(47)99522-4996'),
+  ('cindy@outlook.com', '(33)99855-4669'),
+  ('fernandamendes@yahoo.com', '(33)99200-1556');
+  
+  INSERT INTO sector (sector_id, sector)
+		VALUES (1, 'Administração'),
+		(2, 'Vendas'),
+		(3, 'Operacional'),
+		(4, 'Estratégico'),
+		(5, 'Marketing');
+    
+INSERT INTO employee (first_name, last_name, contact_id, register_date)
+		VALUES ('Joseph', 'Rodrigues', 1, '2020-05-05 08:50:25'),
+		('André', 'Freeman', 2, '2020-02-05'),
+		('Cíntia', 'Duval', 3, '2020-05-05 10:55:35'),
+		('Fernanda', 'Mendes', 4, '2020-05-05 11:45:40');
+  
+INSERT INTO employee_sector (employee_id, sector_id)
+		VALUES (12, 1),
+		(12, 2),
+		(13, 3),
+		(14, 4),
+		(14, 2),
+		(15, 5);
