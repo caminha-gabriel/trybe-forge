@@ -27,4 +27,4 @@ async function readAll(quantityOfFiles) {
   };
 };
 
-readAll(4);
+// readAll(4);
