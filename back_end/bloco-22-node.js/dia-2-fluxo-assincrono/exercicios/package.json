@@ -1,0 +1,15 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "day 22.2 exercises",
+  "main": "exercise1.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gabriel-caminha",
+  "license": "ISC"
+}
