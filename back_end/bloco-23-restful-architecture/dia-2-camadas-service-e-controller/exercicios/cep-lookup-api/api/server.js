@@ -12,4 +12,6 @@ app.get('/ping', pingController.pong);
 
 app.get('/cep/:cep', cepController.getByCep);
 
+app.post ('/cep', cepController.addCep);
+
 app.listen(PORT, console.log(`App listening to PORT ${PORT}`));
