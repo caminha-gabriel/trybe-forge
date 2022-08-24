@@ -5,23 +5,22 @@ const MoviesModel = require('../../models/movieModel');
 
 describe('Testing Model Layer', () => {
   describe('Insere um novo filme no BD', () => {
-    const payloadMovie = {
-      title: 'Example Movie',
-      directed_by: 'Jane Dow',
-      release_year: 1999,
-    };
-
-    before(async () => {
-      const execute = [{ insertId: 1 }];
-
-      sinon.stub(connection, 'execute').resolves(execute);
-    });
-
-    after(async () => {
-      connection.execute.restore();
-    });
-
     describe('quando é inserido com sucesso', async () => {
+      const payloadMovie = {
+        title: 'Example Movie',
+        directed_by: 'Jane Dow',
+        release_year: 1999,
+      };
+  
+      before(async () => {
+        const execute = [{ insertId: 1 }];
+  
+        sinon.stub(connection, 'execute').resolves(execute);
+      });
+  
+      after(async () => {
+        connection.execute.restore();
+      });
 
       it('retorna um objeto', async () => {
         const response = await MoviesModel.create(payloadMovie);
@@ -42,12 +41,12 @@ describe('Testing Model Layer', () => {
     const id = 1;
     describe('When a movie is found', () => {
       before(async () => {
-        const execute = [{
+        const execute = [[{
           id,
           title: 'Up',
           directed_by: 'Jason Momoa',
           release_year: 2012,
-        }];
+        }]];
     
         sinon.stub(connection, 'execute').resolves(execute);
       });
@@ -58,7 +57,6 @@ describe('Testing Model Layer', () => {
 
       it('returns an object', async () => {
         const response = await MoviesModel.getById(id);
-
         expect(response).to.be.an('object');
       });
 
@@ -80,7 +78,7 @@ describe('Testing Model Layer', () => {
     });
     describe('When a movie is not found', () => {
       before(async () => {
-        const execute = [];
+        const execute = [[]];
     
         sinon.stub(connection, 'execute').resolves(execute);
       });
