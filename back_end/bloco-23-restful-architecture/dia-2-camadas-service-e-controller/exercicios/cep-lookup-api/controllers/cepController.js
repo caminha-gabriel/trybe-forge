@@ -12,6 +12,19 @@ const getByCep = async (req, res) => {
   return res.status(code).json(content);
 };
 
+const addCep = async (req, res) => {
+  const { cep, logradouro, bairro, localidade, uf } = req.body;
+
+  const { code, message, content } = await cepService.addCep(cep, logradouro, bairro, localidade, uf);
+
+  if (message) {
+    return res.status(code).json({ message });
+  };
+
+  return res.status(code).json(content);
+};
+
 module.exports = {
   getByCep,
+  addCep,
 }
