@@ -36,3 +36,7 @@ describe('Insere um novo filme no BD', () => {
 
   });
 });
+
+describe('Check a movie by Id', () => {
+  const 
+})
