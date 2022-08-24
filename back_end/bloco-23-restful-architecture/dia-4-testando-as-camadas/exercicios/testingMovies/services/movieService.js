@@ -29,6 +29,34 @@ const create = async ({ title, directedBy, releaseYear }) => {
   };
 };
 
+const getById = async (id) => {
+  const response = await MoviesModel.getById(id);
+
+  if (!response) {
+    return {
+      code: 404,
+      message: 'Movie not found'
+    };
+  };
+
+  const {
+    title,
+    directed_by: directedBy,
+    release_year: releaseYear
+  } = response;
+
+  return {
+    code: 200,
+    content : {
+      id,
+      title,
+      directedBy,
+      releaseYear,
+    },
+  };
+};
+
 module.exports = {
   create,
+  getById,
 };
