@@ -4,6 +4,7 @@ import connection from '../models/connection';
 import BookModel from '../models/book.model';
 import Book from '../interfaces/book.interface';
 import { NotFoundError } from 'restify-errors';
+import patchBook from '../interfaces/patchBook.interface';
 
 class BookService {
   public model: BookModel;
@@ -42,6 +43,15 @@ class BookService {
     }
 
     this.model.remove(id);
+  }
+
+  public async patch(id: number, book: patchBook): Promise<void> {
+    const bookFound = await this.model.getById(id);
+    if (!bookFound) {
+      throw new NotFoundError('NotFoundError');
+    }
+
+    return this.model.patch(id, book);
   }
 }
 
