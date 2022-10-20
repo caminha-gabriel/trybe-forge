@@ -1,0 +1,48 @@
+// comparing operators
+1. db.restaurants.find({ borough: { $in: ["Queens", "Staten Island", "Bronx"] } });
+
+2. db.restaurants.find({ cuisine: { $ne: "American" } });
+
+3. db.restaurants.find({ rating: { $gte: 8 } });
+
+4. db.restaurants.find({ rating: { $lt: 4 } });
+
+5. db.restaurants.find({ rating: { $nin: [5, 6, 7] } });
+
+
+// logic operators
+1. db.restaurants.countDocuments({ rating: { $not: { $lte: 5 } } });
+
+2. db.restaurants.countDocuments({
+  $or: [{ rating: { $gte: 6 } }, { borough: "Brooklyn" }],
+});
+
+3. db.restaurants.countDocuments({
+  $and: [
+    { borough: { $in: ["Queens", "Staten Island", "Brooklyn"] } },
+    { rating: { $gt: 4 } },
+  ],
+});
+
+4. db.restaurants.countDocuments({
+  $nor: [{ rating: { $eq: 1 } }, { cuisine: "American" }],
+});
+
+5. db.restaurants.countDocuments({
+  $and: [
+    { $or: [{ rating: { $gt: 6, $lt: 10 } }] },
+    { $or: [{ borough: "Brooklyn" }, { cuisine: { $ne: "Delicatessen" } }] },
+  ],
+});
+
+
+// sort method
+1. db.restaurants.find().sort({ name: 1 });
+
+2. db.restaurants.find().sort({ rating: -1 });
+
+
+// removing documents
+1. db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" });
+
+2. db.restaurants.deleteMany({ cuisine: "American" });
