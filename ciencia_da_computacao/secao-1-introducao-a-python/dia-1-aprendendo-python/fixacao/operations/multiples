@@ -1,0 +1,4 @@
+ratings = [6, 8, 5, 9, 10]
+multiples_of_three = [rate for rate in ratings
+			if rate % 3 == 0
+]

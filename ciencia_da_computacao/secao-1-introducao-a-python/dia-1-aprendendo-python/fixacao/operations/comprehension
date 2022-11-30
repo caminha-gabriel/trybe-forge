@@ -1,0 +1,2 @@
+ratings = [6, 8, 5, 9, 10]
+updated_ratings = [rate * 10 for rate in ratings]
